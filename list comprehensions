@@ -1,0 +1,18 @@
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    
+    # The list comprehension logic:
+    # 1. Generate i from 0 to x
+    # 2. Generate j from 0 to y
+    # 3. Generate k from 0 to z
+    # 4. Filter out cases where i + j + k == n
+    
+    ans = [[i, j, k] for i in range(x + 1) 
+                     for j in range(y + 1) 
+                     for k in range(z + 1) 
+                     if i + j + k != n]
+    
+    print(ans)
